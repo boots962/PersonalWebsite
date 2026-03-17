@@ -24,12 +24,12 @@
     </header>
 
     <main>
-        <section class="hello">
-            <p>Hi, I'm Jack Gelinas!</p>
+        <section class="hello fade-in">
+            <p id="typing">
             
             <img src="jgelinas.jpg" alt="Jack Gelinas" class="profile-pic">
         </section>
-        <section id="about">
+        <section id="about" class="fade-in">
             <h2>About Me</h2>
             <p>Second year Computer Science student at Western University, where I am pursuing my passion for technology and innovation. </p>
             <div class="about-content">
@@ -66,7 +66,7 @@
                 <br> Further work experience on resume.
             </p>
         </section>
-        <section id="projects">
+        <section id="projects" class="fade-in">
             <h2>Projects</h2>
             <div class="project-list">
                 <div class="project-card">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="fade-in">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:jgelinas@uwo.ca">jgelinas@uwo.ca</a></p>
             <p>GitHub: <a href="https://github.com/boots962/" target="_blank">github.com/boots962</a></p>
@@ -115,6 +115,40 @@
             navToggle.setAttribute('aria-expanded', String(!expanded));
             mainNav.classList.toggle('open');
         });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Typing animation
+        const typingElement = document.getElementById('typing');
+        const text = "Hi, I'm Jack Gelinas!";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+
+        typeWriter();
     </script>
 </body>
 </html>
