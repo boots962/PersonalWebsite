@@ -11,7 +11,10 @@
         <div class="brand">
             <h1>Jack Gelinas</h1>
         </div>
-        <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
             <a href="#" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About Me</a>
             <a href="#projects" class="nav-link">Projects</a>
@@ -102,5 +105,16 @@
             <p>Instagram: <a href="http://instagram.com/jack_gelinas/?hl=en" target="_blank">http://instagram.com/jack_gelinas/?hl=en</a></p>
         </section>
     </main>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            mainNav.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
