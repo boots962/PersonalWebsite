@@ -1,0 +1,209 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0b0f;
+    color: #f4f4f7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.55;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(15, 15, 30, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 0.9rem;
+    font-weight: 600;
+    border-radius: 0.35rem;
+    color: #f4f4f7;
+    transition: background 150ms ease, color 150ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #f4f4f7;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+.hello {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.hello p {
+    margin: 0 auto;
+    max-width: 67rem;
+    font-size: 5.0rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(45deg, #ff7e5f, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#about {
+    text-align: center;
+    margin-top: 10.5rem;
+}
+.hello .profile-pic {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: 1rem auto 1.5rem;
+    border-radius: 50%;
+    border: 10px solid linear-gradient(45deg, #ff7e5f, #00d4ff);
+    object-fit: cover;
+}
+#about :hover {
+    color: #fdfdfd9c;
+    background-color: #0b0b0faf;
+}
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+#about p {
+    max-width: 67rem;
+    font-size: 1.5rem;
+}
+.about-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.languages, .education {
+    flex: 1;
+    min-width: 250px;
+}
+#about ul :hover {
+    color: #3da3e79c;
+}
+ #about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 1rem;
+    margin: 1.5rem auto 0;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+ }
+ #about ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #3da3e7;
+    padding: 0.5rem 1rem;
+    background-color: rgba(28, 51, 156, 0.8);
+    border-radius: 0.5rem;
+ }
+
+ #about h3{ 
+    text-align: center;
+    margin-top: 2rem;
+     font-size: 2rem;
+      color: #3da3e7;
+ }
+
+ #about .education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 1rem;
+    margin: 1.5rem auto 0;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+ }
+#about h4{
+    font-size: 1.5rem;
+    color: #3da3e7;
+}
+
+#projects :hover {
+    color: #ffffff86;
+    background-color: #0b0b0faf;
+}
+#projects {
+    margin-top: 10rem;
+}
+#projects h2 {
+    margin-bottom: 0.75rem;
+        font-size: 3rem;
+        text-align: center;
+        color: #ffffff;
+}
+#projects .project-list {
+    display: grid;
+    gap: 1.5rem;
+}
+#projects .project-card {
+    padding: 1.5rem;
+    background: rgba(15, 15, 30, 0.95);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.project-link:hover {
+    text-decoration: underline;
+}
+#contact {
+    text-align: center;
+    margin-top: 10rem;
+}
+#contact h2 {
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+#contact p {
+    font-size: 1.5rem;
+}
+#contact a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
