@@ -249,7 +249,7 @@ main {
     color: #3da3e7;
 }
 
-#projects :hover {
+#projects .project-list :hover {
     color: #ffffff86;
     background-color: #0b0b0faf;
 }
