@@ -43,6 +43,7 @@
                         <li>HTML/CSS</li>
                         <li>C++</li>
                         <li>JavaScript</li>
+                        <li>MySQL</li>
                     </ul>
                 </div>
                 <div class="education">
@@ -122,6 +123,20 @@
                 navToggle.setAttribute('aria-expanded', 'false');
             });
         });
+
+                // Close menu when clicking anywhere outside the nav or toggle button
+        document.addEventListener('click', (event) => {
+            const isClickInsideNav = mainNav.contains(event.target);
+            const isClickOnToggle = navToggle.contains(event.target);
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+
+            // If the menu is open and the click is outside the nav and the toggle button
+            if (isExpanded && !isClickInsideNav && !isClickOnToggle) {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+       
 
         const observerOptions = {
             threshold: 0.1,
